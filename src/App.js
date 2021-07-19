@@ -9,7 +9,9 @@ function App() {
         <GiWeightLiftingUp className="inline-block text-white align-top"/>
         Your Workout Schedule
         </h1>
-        <div class="mb-5 flex flex-col min-w-full">
+        <div class="mt-5">
+        <div class="w-1/2 flex mx-auto bg-white rounded-md">
+        <div class="p-5 flex flex-col min-w-full">
                 <label for="workout" class="font-medium text-black"
                   >Workout</label
                 >
@@ -41,7 +43,9 @@ function App() {
           <button class="align-right text-2xl bg-red-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
             Add Workout
           </button>
-              </div>
+            </div>
+            </div>
+          </div>
         </div>
     </div>
   );
