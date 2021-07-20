@@ -1,4 +1,5 @@
 import { GiWeightLiftingUp } from "react-icons/gi"
+import Tasks from './components/Tasks'
 
 
 
@@ -6,7 +7,7 @@ function App() {
   return (
     <div className="App container mx-auto mt-3 font-thin">
       <div className="bg-red-300 p-6 rounded-lg shadow-lg">
-      <h1 className="text-5xl text-black">
+      <h1 className="text-5xl text-black text-center">
         <GiWeightLiftingUp className="inline-block text-black align-top"/>
         Your Daily Workout Schedule
         </h1>
@@ -46,11 +47,14 @@ function App() {
               </div>
               <button onClick={addWorkout} className="btn align-right text-2xl bg-red-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" title="Schedule Workout">
           Add Workout
-        </button>
+              </button>
             </div>
             </div>
           </div>
         </div>
+      <div>
+        <Tasks />
+      </div>
     </div>
   );
 
