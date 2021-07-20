@@ -11,7 +11,7 @@ function App() {
     text: 'Pilates',
     date: '07/19',
     time: '6:00am',
-    reminder: false,
+    reminder: true,
     },
     {
       id: 2,
@@ -24,6 +24,10 @@ function App() {
 
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id))
+  }
+
+  const toggleReminder = (id) => {
+    setTasks(tasks.map((task) => task.id === id ? {...task, reminder: !task.reminder} : task))
   }
   return (
     <div className="App container mx-auto mt-3 font-thin">
@@ -74,7 +78,7 @@ function App() {
           </div>
         </div>
       <div>
-        <Tasks tasks={tasks} onDelete={deleteTask} />
+        {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ('No Workouts to Show')}
       </div>
     </div>
     
