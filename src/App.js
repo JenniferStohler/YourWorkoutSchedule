@@ -1,13 +1,14 @@
 import { GiWeightLiftingUp } from "react-icons/gi"
 
 
+
 function App() {
   return (
     <div className="App container mx-auto mt-3 font-thin">
       <div className="bg-red-300 p-6 rounded-lg shadow-lg">
-      <h1 className="text-5xl bg-black text-white">
-        <GiWeightLiftingUp className="inline-block text-white align-top"/>
-        Your Workout Schedule
+      <h1 className="text-5xl text-black">
+        <GiWeightLiftingUp className="inline-block text-black align-top"/>
+        Your Daily Workout Schedule
         </h1>
         <div className="mt-5">
         <div className="w-1/2 flex mx-auto bg-white rounded-md">
@@ -43,15 +44,19 @@ function App() {
                   title="Add Time"
                 />
               </div>
-          <button className="align-right text-2xl bg-red-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" title="Schedule Workout">
-            Add Workout
-          </button>
+              <button onClick={addWorkout} className="btn align-right text-2xl bg-red-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" title="Schedule Workout">
+          Add Workout
+        </button>
             </div>
             </div>
           </div>
         </div>
     </div>
   );
+
+}
+function addWorkout() {
+  console.log('click');
 }
 
 export default App;
