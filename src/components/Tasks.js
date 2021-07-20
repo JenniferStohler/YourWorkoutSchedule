@@ -1,24 +1,10 @@
-const tasks = [
-  {
-  id: 1,
-  text: 'Pilates',
-  date: '07/19',
-  time: '6:00am',
-  reminder: false,
-  },
-  {
-    id: 2,
-    text: 'Bicep Curls',
-    date: '07/19',
-    time: '6:30am',
-    reminder: false,
-  }
-]
+import Task from './Task'
 
-const Tasks = () => {
+const Tasks = ({ tasks }) => {
+  
   return (
     <div>
-      {tasks.map((task) => (<h3 key={task.id}>{task.text}{task.date}{task.time}</h3>))}
+      {tasks.map((task) => (<Task key={task.id} task={task}/>))}
     </div>
   )
 }

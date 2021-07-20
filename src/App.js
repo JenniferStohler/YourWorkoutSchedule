@@ -1,9 +1,26 @@
-import { GiWeightLiftingUp } from "react-icons/gi"
+import { GiWeightLiftingUp } from 'react-icons/gi'
 import Tasks from './components/Tasks'
+import { useState } from 'react'
 
 
 
 function App() {
+  const [tasks, setTasks] = useState([
+    {
+    id: 1,
+    text: 'Pilates',
+    date: '07/19',
+    time: '6:00am',
+    reminder: false,
+    },
+    {
+      id: 2,
+      text: 'Bicep Curls',
+      date: '07/19',
+      time: '6:30am',
+      reminder: false,
+    }
+  ])
   return (
     <div className="App container mx-auto mt-3 font-thin">
       <div className="bg-red-300 p-6 rounded-lg shadow-lg">
@@ -53,9 +70,10 @@ function App() {
           </div>
         </div>
       <div>
-        <Tasks />
+        <Tasks tasks={tasks} />
       </div>
     </div>
+    
   );
 
 }
