@@ -20,8 +20,8 @@ const AddTask = ({onAdd}) => {
     setReminder(false)
   }
   return (
-
     <form className="add-form mt-5" onSubmit={onSubmit}>
+      <div className="bg-red-300 p-6 rounded-lg shadow-lg">
           <div className="form-control w-1/2 flex mx-auto bg-white rounded-md">
           <div className="p-5 flex flex-col min-w-full">
                 <label htmlFor="workout" className="font-medium text-black"
@@ -63,7 +63,8 @@ const AddTask = ({onAdd}) => {
               </div>
               <input type='submit' value='Submit Your Workout!' className='btn btn-block bg-blue-200' title='Submit Your Workout' />
             </div>
-            </div>
+        </div>
+        </div>
           </form>
   )
 }

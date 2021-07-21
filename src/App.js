@@ -8,6 +8,7 @@ import AddTask from "./components/AddTask"
 
 
 function App() {
+  const [showAddTask, setShowAddTask] = useState(true)
   const [tasks, setTasks] = useState([
     {
     id: 1,
@@ -41,16 +42,17 @@ function App() {
 
   return (
     <div className="App container mx-auto mt-3 font-thin">
-      <div className="bg-red-300 p-6 rounded-lg shadow-lg">
-      <h1 className="text-5xl text-black text-center">
+      
+        <h1 className="text-5xl text-black text-center">
         <GiWeightLiftingUp className="inline-block text-black align-top"/>
         Your Daily Workout Schedule
         </h1>
-        <AddTask onAdd={addTask}/>
-        
-        </div>
+        {showAddTask && <AddTask onAdd={addTask} />}
+      
       <div>
-        {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ('No Workouts to Show')}
+      <div className="bg-white-300 p-6 rounded-lg shadow-lg">
+          {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ('No Workouts to Show')}
+        </div>
       </div>
     </div>
     
