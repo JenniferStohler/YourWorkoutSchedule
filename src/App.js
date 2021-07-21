@@ -8,7 +8,7 @@ import AddTask from "./components/AddTask"
 
 
 function App() {
-  const [showAddTask, setShowAddTask] = useState(true)
+  
   const [tasks, setTasks] = useState([
     {
     id: 1,
@@ -47,7 +47,7 @@ function App() {
         <GiWeightLiftingUp className="inline-block text-black align-top"/>
         Your Daily Workout Schedule
         </h1>
-        {showAddTask && <AddTask onAdd={addTask} />}
+         <AddTask onAdd={addTask} />
       
       <div>
       <div className="bg-white-300 p-6 rounded-lg shadow-lg">
