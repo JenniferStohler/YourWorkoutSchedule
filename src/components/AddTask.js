@@ -1,6 +1,27 @@
-const AddTask = () => {
+import { useState } from 'react'
+
+
+const AddTask = ({onAdd}) => {
+
+  const [text, setText] = useState('')
+  const [date, setDate] = useState('')
+  const [reminder, setReminder] = useState(false)
+  const onSubmit = (e) => {
+    e.preventDefault()
+
+    if (!text) {
+      alert('Please add a workout')
+      return;
+    }
+
+    onAdd({ text, date, reminder })
+    setText('')
+    setDate('')
+    setReminder(false)
+  }
   return (
-    <form className="add-form mt-5">
+
+    <form className="add-form mt-5" onSubmit={onSubmit}>
           <div className="form-control w-1/2 flex mx-auto bg-white rounded-md">
           <div className="p-5 flex flex-col min-w-full">
                 <label htmlFor="workout" className="font-medium text-black"
@@ -10,7 +31,9 @@ const AddTask = () => {
                   type="text"
                   id="workout"
                 className="w-full py-2 border mt-3 border-gray-300 rounded-md"
-                title="Add Workout"
+            title="Add Workout"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
           />
           <div className="mb-5 flex flex-col min-w-full">
                 <label htmlFor="date" className="font-medium text-black"
@@ -20,7 +43,9 @@ const AddTask = () => {
                   type="text"
                   id="date"
                   className="w-full py-2 border mt-3 border-gray-300 rounded-md"
-                  title="Add Date and Time"
+              title="Add Date and Time"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
                 />
           </div>
           <div className="form-control-checkbox mb-5 flex flex-col min-w-full">
@@ -30,10 +55,13 @@ const AddTask = () => {
                 <input
                   type="checkbox"
                   id="reminder"
-                  title="Set Reminder"
+              title="Set Reminder"
+              value={reminder}
+              onChange={(e) => setReminder(e.currentTarget.checked)}
+              checked={reminder}
                 />
               </div>
-              <input type='submit' value='Add Task' className='btn btn-block' />
+              <input type='submit' value='Submit Your Workout!' className='btn btn-block bg-blue-200' title='Submit Your Workout' />
             </div>
             </div>
           </form>

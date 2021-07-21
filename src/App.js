@@ -25,6 +25,10 @@ function App() {
     }
   ])
 
+  const addTask = (task) => {
+    console.log(task);
+  }
+
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id))
   }
@@ -40,7 +44,7 @@ function App() {
         <GiWeightLiftingUp className="inline-block text-black align-top"/>
         Your Daily Workout Schedule
         </h1>
-        <AddTask />
+        <AddTask onAdd={addTask}/>
         
         </div>
       <div>
