@@ -1,18 +1,17 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "Pilates",
-      "date": "07/19",
-      "time": "6: 00am",
-      "reminder": true
-    },
-    {
       "id": 2,
       "text": "Bicep Curls",
       "date": "07/19",
       "time": "6: 30am",
       "reminder": false
+    },
+    {
+      "text": "Leg Day",
+      "date": "7/21/21 at 9am",
+      "reminder": true,
+      "id": 3
     }
   ]
 }
