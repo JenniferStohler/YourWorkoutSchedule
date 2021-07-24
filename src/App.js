@@ -85,7 +85,7 @@ function App() {
   }
 
   return (
-    <div className="App container mx-auto mt-3 font-thin">
+    <div className="App container mx-auto mt-5 font-thin text-center">
       
       <Router>
         <h1 className="text-5xl text-black text-center">
@@ -94,13 +94,15 @@ function App() {
         </h1>
          <AddTask onAdd={addTask} />
       
-      <div>
-      <div className="bg-white-300 p-6 rounded-lg shadow-lg">
+ 
+          <div className="p-5 border mx-40 bg-white rounded-lg shadow-lg">
+            <h3 class="text-sm font-bold">
             {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ('No Workouts to Show')}
+            </h3>
             <Route path='/about' component={About} />
           <Footer />
         </div>
-      </div>
+   
       </Router>
       </div>
     
