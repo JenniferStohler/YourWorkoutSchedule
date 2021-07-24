@@ -96,7 +96,7 @@ function App() {
       
  
           <div className="p-5 border mx-40 bg-white rounded-lg shadow-lg">
-            <h3 class="text-sm font-bold">
+            <h3 className="text-sm font-bold">
             {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ('No Workouts to Show')}
             </h3>
             <Route path='/about' component={About} />

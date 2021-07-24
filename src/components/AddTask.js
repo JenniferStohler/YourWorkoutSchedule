@@ -21,8 +21,8 @@ const AddTask = ({onAdd}) => {
   }
   return (
     <form className="add-form mt-5" onSubmit={onSubmit}>
-      <div className="p-6 rounded-lg shadow-lg">
-          <div className="form-control w-1/2 flex mx-auto bg-white border rounded-md">
+      <div className="p-6 rounded-lg">
+          <div className="form-control w-1/2 flex mx-auto bg-white border shadow-lg rounded-md">
           <div className="p-5 flex flex-col min-w-full">
                 <label htmlFor="workout" className="font-medium text-black"
                   >Workout</label
