@@ -1,16 +1,10 @@
 {
   "tasks": [
     {
-      "text": "Leg Day",
-      "date": "7/21/21 at 9am",
+      "text": "Deltoids",
+      "date": "Friday at Noon",
       "reminder": true,
-      "id": 3
-    },
-    {
-      "text": "Abs",
-      "date": "Tomorrow at noon",
-      "reminder": false,
-      "id": 4
+      "id": 5
     }
   ]
 }

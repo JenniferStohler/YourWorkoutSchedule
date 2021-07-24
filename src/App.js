@@ -99,8 +99,8 @@ function App() {
             <h3 className="text-sm font-bold">
             {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ('No Workouts to Show')}
             </h3>
-            <Route path='/about' component={About} />
           <Footer />
+            <Route path='/about' component={About} />
         </div>
    
       </Router>
